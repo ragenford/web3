@@ -1,5 +1,5 @@
 import React from 'react';
-import Part from 'components/ComponentPart/Part'
+import Part from './../ComponentPart/Part'
 
 const Content = (props) => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Content from 'components/ComponentContent/Content';
-import Header from 'components/componentHeader/Header';
+import Content from './../ComponentContent/Content';
+import Header from './../componentHeader/Header';
 
 
 const Total = (props) => {
