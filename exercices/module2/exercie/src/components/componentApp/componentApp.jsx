@@ -37,11 +37,12 @@ const App = () => {
 import { useState } from "react";
 
 const App = () => {
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(localStorage.getItem("counter"));
   console.log("rendering with counter value", counter);
 
   const changeCount = (delta) => {
     setCounter(counter + delta);
+    localStorage.setItem("counter", JSON.stringify(counter));
   };
   return (
     <div>
