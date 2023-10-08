@@ -1,12 +1,18 @@
 import { useState } from "react";
 import Display from "components/componentDisplay/componentDisplay";
 import Button from "components/componentButton/componentButton";
+import Loading from "components/componentLoading/componentLoading";
 
 const App = () => {
   // save clicks of each button to its own state
   const [good, setGood] = useState(0);
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
+  const [loading, setLoading] = useState(true);
+
+  setTimeout(() => setLoading(false), 3000);
+
+  if (loading) return <Loading />;
 
   const incrementGood = () => {
     setGood(good + 1);
